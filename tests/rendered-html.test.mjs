@@ -15,8 +15,12 @@ test("exports Darren Crombie's homepage for Cloudflare Pages", async () => {
   assert.match(html, /AgeWell/);
   assert.match(html, /Any Guru/);
   assert.match(html, /Health Innovation Network/);
-  assert.match(html, /Dorset Council/);
   assert.match(html, /Carers Trust/);
+  assert.match(html, /180,000\+/);
+  assert.match(html, /Grow the impact/);
+  assert.match(html, /reduce delivery costs/i);
+  assert.match(html, /carers-trust-report-accounts-2024-25\.pdf/);
+  assert.doesNotMatch(html, /3,000\+|Dorset carers reached within months/);
   assert.match(html, /https:\/\/calendly\.com\/upstreamhealth\/30min/);
   assert.match(html, /Book a 30-minute conversation/);
   assert.match(html, /ANOTHER BUSINESS UNIT/);

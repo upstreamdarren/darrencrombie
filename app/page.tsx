@@ -4,7 +4,7 @@ const calendlyUrl = "https://calendly.com/upstreamhealth/30min";
 
 export const metadata: Metadata = {
   description:
-    "Darren Crombie’s documented journey from Accenture and DXC to founding Upstream Health and Bridgit Care — building responsible AI for carers, healthy ageing and public services.",
+    "Darren Crombie’s journey from Accenture and DXC to founding Bridgit Care — supporting 180,000+ carers and helping charities deliver more impact at lower cost.",
   alternates: { canonical: "/" },
 };
 
@@ -66,11 +66,11 @@ const milestones = [
     source: "Innovate UK Business Connect",
   },
   {
-    year: "2023–25",
-    title: "From idea to infrastructure",
-    copy: "Dorset Council reported more than 3,000 carers using Bridgit within months of launch. Further public-sector deployments followed, including a county-wide Warwickshire service in 2025.",
-    href: "https://www.dorsetcouncil.gov.uk/news/carers-flock-to-one-stop-shop-online-platform-bridgit-care",
-    source: "Dorset Council",
+    year: "2025",
+    title: "Impact over growth",
+    copy: "A strategic partnership with Carers Trust changed the next decision. Rather than grow for growth’s sake, Bridgit would help local carer charities extend their reach, reduce delivery costs and demonstrate more impact.",
+    href: "https://carers.org/downloads/carers-trust-report-accounts-2024-25.pdf",
+    source: "Carers Trust annual report",
   },
 ];
 
@@ -78,7 +78,7 @@ const currentWork = [
   {
     name: "Bridgit Care",
     tag: "CARE · PUBLIC SERVICES · AI",
-    copy: "Helping unpaid carers find practical, local support — while giving councils, NHS teams and carer organisations a better way to reach people earlier.",
+    copy: "More than 180,000 carers supported — while helping councils, NHS teams and local charities reach people earlier, reduce delivery costs and keep support rooted in their communities.",
     href: "https://bridgit.care",
   },
   {
@@ -111,14 +111,14 @@ const evidence = [
   {
     publisher: "Social Care Institute for Excellence",
     title: "Carers assessment showcase",
-    note: "A Department of Health and Social Care-backed webinar on the Dorset collaboration and national deployment.",
+    note: "A Department of Health and Social Care-backed webinar on digitally supported carers assessments and national deployment.",
     href: "https://www.scie.org.uk/innovation/showcase-webinars/carers-assessment-process/",
   },
   {
-    publisher: "Dorset Council",
-    title: "3,000 carers reached after launch",
-    note: "Independent reporting on how Bridgit was being used across Dorset’s health and care landscape.",
-    href: "https://www.dorsetcouncil.gov.uk/news/carers-flock-to-one-stop-shop-online-platform-bridgit-care",
+    publisher: "Carers Trust",
+    title: "A strategic partnership for local services",
+    note: "Carers Trust’s annual report records Bridgit as part of its Innovate to Transform work, giving Network Partners access to digital support alongside trusted local services.",
+    href: "https://carers.org/downloads/carers-trust-report-accounts-2024-25.pdf",
   },
   {
     publisher: "Carers Trust",
@@ -280,8 +280,8 @@ export default function Home() {
           <span>innovation funding raised</span>
         </div>
         <div>
-          <strong>3,000+</strong>
-          <span>Dorset carers reached within months</span>
+          <strong>180,000+</strong>
+          <span>carers supported through Bridgit</span>
         </div>
       </section>
 
@@ -377,6 +377,13 @@ export default function Home() {
             prouder of what it represents: other people backing ideas with the
             potential to improve lives.
           </p>
+          <p>
+            By 2025, Bridgit had grown as large as we had originally planned.
+            The strategic partnership with Carers Trust became the next key
+            decision point. It moved the question from “how much more revenue
+            can we grow?” to “how much more impact can local carer charities
+            create if the cost of delivering support comes down?”
+          </p>
           <div className="founder-actions">
             <a className="button-coral" href="https://bridgit.care" target="_blank" rel="noreferrer">
               Explore Bridgit Care <Arrow />
@@ -417,13 +424,48 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="impact-principle" aria-labelledby="impact-title">
+        <div className="impact-kicker">
+          <p className="section-label">THE DECISION THAT MATTERS NOW</p>
+          <span>180,000+</span>
+          <small>carers supported</small>
+        </div>
+        <div className="impact-copy">
+          <h2 id="impact-title">Grow the impact.<br />Reduce the cost.</h2>
+          <p className="impact-lead">
+            Bridgit is not trying to replace local carer charities. The aim is
+            to put useful technology behind them, so their knowledge can reach
+            more people without adding more administration or cost.
+          </p>
+          <p>
+            The 2025 strategic partnership with Carers Trust gave that idea a
+            national route. Together, the focus is affordable digital support,
+            stronger evidence for funders and more time for local teams to do
+            the deeply human work only they can do.
+          </p>
+          <p className="impact-belief">
+            Success is not the size of the software business. It is the number
+            of people and charities that can do more because the platform exists.
+          </p>
+          <div className="impact-actions">
+            <a href="https://bridgit.care/carers-trust-partnership/blog" target="_blank" rel="noreferrer">
+              Read the partnership story <Arrow />
+            </a>
+            <a href="https://carers.org/downloads/carers-trust-report-accounts-2024-25.pdf" target="_blank" rel="noreferrer">
+              Carers Trust annual report <Arrow />
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="work-now" id="work">
         <div className="section-intro">
           <p className="section-label">04 / WHAT I’M BUILDING NOW</p>
           <h2>The mission is widening. The principle is not.</h2>
           <p>
             Start with a real problem. Listen properly. Use technology to make
-            good support easier to reach.
+            good support easier and more affordable to deliver — then measure
+            success in lives improved, not revenue accumulated.
           </p>
         </div>
         <div className="work-grid">
