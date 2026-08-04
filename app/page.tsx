@@ -13,19 +13,19 @@ const journey = [
     chapter: "01",
     organisation: "Accenture",
     title: "Learning how change happens at scale.",
-    copy: "I began my career in the technology world at Accenture. It taught me the craft behind complex delivery: how to listen, simplify, bring different people together and turn a bold idea into something that works in the real world.",
+    copy: "I started my career at Accenture. It taught me how complex change really happens: listen properly, simplify the problem, bring the right people together and turn a bold idea into something that works in the real world.",
   },
   {
     chapter: "02",
     organisation: "DXC Technology",
     title: "Leading innovation beyond the slide deck.",
-    copy: "At DXC I moved deeper into innovation — leading projects, exploring emerging technology and helping teams move from possibility to practical change. The lesson that stayed with me: innovation only matters when somebody feels the benefit.",
+    copy: "At DXC I got closer to innovation — leading projects, exploring emerging technology and helping teams move from possibility to practical change. The lesson I carried forward was simple: innovation only matters when somebody feels the benefit.",
   },
   {
     chapter: "03",
     organisation: "Founder",
     title: "Building around problems worth solving.",
-    copy: "In 2017, sitting at the back of a health innovation event in Leeds, I decided it was time to stop thinking about starting a business and start. Upstream Health followed in early 2018 — and the founder chapter began.",
+    copy: "In 2017, sat at the back of a health innovation event in Leeds, I decided it was time to stop talking about starting a business and actually start one. Upstream Health followed in early 2018 — and the founder chapter began.",
   },
 ];
 
@@ -82,10 +82,10 @@ const currentWork = [
     href: "https://bridgit.care",
   },
   {
-    name: "AgeWell",
-    tag: "HEALTHY AGEING · PREVENTION",
-    copy: "A digital healthy-ageing platform created for the Open University’s Take Five to Age Well campaign, with contributions from Age UK and the Open University.",
-    href: "https://wels.open.ac.uk/research/projects/take-five-age-well/take-5-case-studies/agewell-bridgitcare",
+    name: "My UK Life",
+    tag: "INTERNATIONAL RECRUITS · SETTLING IN · AI",
+    copy: "Personalised support for international recruits building a life in the UK — helping people navigate work, wellbeing, housing and their local community across more than 30 regions.",
+    href: "https://ai.myuk.life",
   },
   {
     name: "Any Guru",
@@ -127,10 +127,10 @@ const evidence = [
     href: "https://carers.org/downloads/network-partner-conference-brochure-2025.pdf",
   },
   {
-    publisher: "The Open University",
-    title: "AgeWell case study",
-    note: "How evidence-informed healthy-ageing advice became friendly, achievable digital support.",
-    href: "https://wels.open.ac.uk/research/projects/take-five-age-well/take-5-case-studies/agewell-bridgitcare",
+    publisher: "My UK Life",
+    title: "Support for international recruits",
+    note: "Personalised AI guidance, practical tools and local services for people making a new life in the UK.",
+    href: "https://ai.myuk.life",
   },
 ];
 
@@ -179,12 +179,14 @@ const personSchema = {
   affiliation: [
     { "@type": "Organization", name: "Upstream Health", url: "https://www.upstream.health" },
     { "@type": "Organization", name: "Any Guru", url: "https://any.guru" },
+    { "@type": "Organization", name: "My UK Life", url: "https://ai.myuk.life" },
   ],
   sameAs: [
     "https://uk.linkedin.com/in/darren-crombie",
     "https://bridgit.care/author/darren",
     "https://www.upstream.health/meet-the-team",
     "https://any.guru/",
+    "https://ai.myuk.life/",
   ],
   worksFor: {
     "@type": "Organization",
@@ -236,16 +238,16 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">TECHNOLOGIST · FOUNDER · HUMAN OPTIMIST</p>
+          <p className="eyebrow">TECHNOLOGIST · FOUNDER · BUILDER</p>
           <h1>
             Tech is the thread.
             <br />
             <em>People are the point.</em>
           </h1>
           <p className="hero-intro">
-            I’m Darren Crombie — a lifelong technologist, innovation leader and
-            founder trying to make ambitious technology useful in the moments
-            that matter.
+            I’m Darren Crombie. I’ve spent my career turning ambitious
+            technology into practical support for people — first inside big
+            technology organisations, and now as a founder.
           </p>
           <div className="hero-actions">
             <a className="button-dark" href="#story">
@@ -297,16 +299,16 @@ export default function Home() {
           </p>
           <p>
             My career has taken me from global technology organisations to
-            starting companies of my own. Along the way I have led innovation
+            starting companies of my own. Along the way I’ve led innovation
             projects, worked with brilliant people across sectors and learnt
-            that real progress rarely starts with the answer. It starts with a
-            better question and the courage to keep going when the route is not
-            obvious.
+            that progress rarely starts with the answer. Usually it starts with
+            a better question — and the willingness to keep going when the
+            route is not obvious.
           </p>
           <p>
-            Today, most of my energy sits at the meeting point of AI, care and
-            public services. It is complicated, important work — which is
-            exactly why I enjoy it.
+            Today, most of my energy sits where AI, care and public services
+            meet. It’s complicated, important work. That is exactly why I enjoy
+            it.
           </p>
           <p className="source-note">
             The documented version of this journey begins with 15 years in
@@ -511,9 +513,9 @@ export default function Home() {
           <p className="section-label">05 / AWAY FROM WORK</p>
           <h2>The people — and places — that keep me grounded.</h2>
           <p>
-            I’m husband to my amazing wife, Jules, and dad to Frankie and
-            William. They are the home team, the honest feedback panel and some
-            of my favourite adventure partners.
+            I’m a husband and dad to two brilliant kids. They are the home team,
+            the honest feedback panel and some of my favourite adventure
+            partners.
           </p>
         </div>
         <div className="life-grid">
@@ -523,19 +525,17 @@ export default function Home() {
           </figure>
           <figure className="life-photo life-photo-wide">
             <img
-              className="mirror"
-              src="/images/family-hike.jpg"
-              alt="Darren with Frankie and William ready for a family hike"
+              src="/images/family-adventure-line-art.webp"
+              alt="Line illustration of Darren and his two children setting off on a family hike"
             />
-            <figcaption>Frankie, William and a lot of kit</figcaption>
+            <figcaption>A family adventure — and a lot of kit</figcaption>
           </figure>
           <figure className="life-photo">
             <img
-              className="mirror"
-              src="/images/jules-and-darren.jpg"
-              alt="Darren and Jules enjoying live music together"
+              src="/images/couple-live-music-line-art.webp"
+              alt="Line illustration of Darren and his wife enjoying live music"
             />
-            <figcaption>Jules — my amazing wife</figcaption>
+            <figcaption>A rare night out together</figcaption>
           </figure>
           <figure className="life-photo life-photo-dog">
             <img src="/images/dog-hills.jpg" alt="Darren's dog enjoying a hill walk" />

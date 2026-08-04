@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://darrencrombie.com"),
   title: {
-    default: "Darren Crombie | Founder, technologist & human optimist",
+    default: "Darren Crombie | Founder, technologist & builder",
     template: "%s | Darren Crombie",
   },
   description:
@@ -19,7 +19,8 @@ export const metadata: Metadata = {
     "Bridgit Care",
     "Upstream Health",
     "Any Guru",
-    "AgeWell",
+    "My UK Life",
+    "international recruits",
     "unpaid carers",
     "Innovate UK",
     "Carers Trust",
