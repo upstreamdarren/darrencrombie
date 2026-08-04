@@ -17,6 +17,8 @@ test("exports Darren Crombie's homepage for Cloudflare Pages", async () => {
   assert.match(html, /Health Innovation Network/);
   assert.match(html, /Dorset Council/);
   assert.match(html, /Carers Trust/);
+  assert.match(html, /https:\/\/calendly\.com\/upstreamhealth\/30min/);
+  assert.match(html, /Book a 30-minute conversation/);
   assert.match(html, /I have aphantasia\./);
   assert.match(html, /Keeping Care Human in a Digital World/);
   assert.match(html, /"@type":"Person"/);

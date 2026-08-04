@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+const calendlyUrl = "https://calendly.com/upstreamhealth/30min";
+
 export const metadata: Metadata = {
   description:
     "Darren Crombie’s documented journey from Accenture and DXC to founding Upstream Health and Bridgit Care — building responsible AI for carers, healthy ageing and public services.",
@@ -215,8 +217,8 @@ export default function Home() {
           <a href="#life">Life</a>
           <a href="#evidence">Proof</a>
         </nav>
-        <a className="header-cta" href="#contact">
-          Say hello <Arrow />
+        <a className="header-cta" href={calendlyUrl} target="_blank" rel="noreferrer">
+          Book a call <Arrow />
         </a>
         <details className="mobile-menu">
           <summary aria-label="Open navigation">Menu</summary>
@@ -227,6 +229,7 @@ export default function Home() {
             <a href="#work">Work</a>
             <a href="#life">Life</a>
             <a href="#evidence">Proof</a>
+            <a href={calendlyUrl} target="_blank" rel="noreferrer">Book a call ↗</a>
           </nav>
         </details>
       </header>
@@ -580,9 +583,14 @@ export default function Home() {
           looking for a speaker who has built through the messy middle, I’d love
           to hear from you.
         </p>
-        <a className="contact-link" href="https://bridgit.care" target="_blank" rel="noreferrer">
-          Connect through Bridgit Care <Arrow />
-        </a>
+        <div className="contact-actions">
+          <a className="contact-link" href={calendlyUrl} target="_blank" rel="noreferrer">
+            Book a 30-minute conversation <Arrow />
+          </a>
+          <a className="contact-secondary" href="https://bridgit.care" target="_blank" rel="noreferrer">
+            Connect through Bridgit Care <Arrow />
+          </a>
+        </div>
       </section>
 
       <footer>
