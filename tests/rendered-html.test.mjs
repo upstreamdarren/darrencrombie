@@ -1,25 +1,9 @@
 import assert from "node:assert/strict";
-import { access } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
-async function render() {
-  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
-  const { default: worker } = await import(workerUrl.href);
-
-  return worker.fetch(
-    new Request("http://localhost/", { headers: { accept: "text/html" } }),
-    { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
-    { waitUntil() {}, passThroughOnException() {} },
-  );
-}
-
-test("server-renders Darren Crombie's homepage", async () => {
-  const response = await render();
-  assert.equal(response.status, 200);
-  assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
-
-  const html = await response.text();
+test("exports Darren Crombie's homepage for Cloudflare Pages", async () => {
+  const html = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
   assert.match(html, /<title>Darren Crombie \| AI for health, care and public services<\/title>/i);
   assert.match(html, /Building technology/);
   assert.match(html, /Technology should make us feel more human, not less\./);
@@ -32,7 +16,7 @@ test("server-renders Darren Crombie's homepage", async () => {
 
 test("includes the finished brand assets", async () => {
   await Promise.all([
-    access(new URL("../public/og.png", import.meta.url)),
-    access(new URL("../public/favicon.svg", import.meta.url)),
+    access(new URL("../out/og.png", import.meta.url)),
+    access(new URL("../out/favicon.svg", import.meta.url)),
   ]);
 });
