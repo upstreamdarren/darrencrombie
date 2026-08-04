@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   description:
-    "The personal story of Darren Crombie — technologist, innovation leader and founder of Bridgit Care, working to keep AI useful, responsible and human.",
+    "Darren Crombie’s documented journey from Accenture and DXC to founding Upstream Health and Bridgit Care — building responsible AI for carers, healthy ageing and public services.",
   alternates: { canonical: "/" },
 };
 
@@ -23,7 +23,112 @@ const journey = [
     chapter: "03",
     organisation: "Founder",
     title: "Building around problems worth solving.",
-    copy: "That journey led me to become a founder. Since then I have built ventures around care, communities and public services, raised more than £1 million in grant funding, and kept asking the same question: how can technology help people sooner?",
+    copy: "In 2017, sitting at the back of a health innovation event in Leeds, I decided it was time to stop thinking about starting a business and start. Upstream Health followed in early 2018 — and the founder chapter began.",
+  },
+];
+
+const milestones = [
+  {
+    year: "2017",
+    title: "The decision",
+    copy: "At a Yorkshire & Humber health innovation event in Leeds, I made the decision to leave employment and become a founder — with a young family, a big idea and no guarantee it would work.",
+    href: "https://thehealthinnovationnetwork.co.uk/wp-content/uploads/2021/06/Yorkshire-Humber-AHSN_Impact-Report_2020-21.pdf",
+    source: "Health Innovation Network",
+  },
+  {
+    year: "2018",
+    title: "Upstream begins",
+    copy: "Upstream Health launched with a preventative-care mission: use technology to help patients and teams intervene earlier, before smaller problems become crises.",
+    href: "https://thehealthinnovationnetwork.co.uk/wp-content/uploads/2021/06/Yorkshire-Humber-AHSN_Impact-Report_2020-21.pdf",
+    source: "Health Innovation Network",
+  },
+  {
+    year: "2019",
+    title: "The human pivot",
+    copy: "The work changed direction. Instead of adding another tool for clinicians, we focused on family carers — inspired by Grandad Doug and the everyday care provided by my mum Jacqueline and my sister.",
+    href: "https://thehealthinnovationnetwork.co.uk/archive/meet-the-innovator-bridgit-care/",
+    source: "Meet the Innovator",
+  },
+  {
+    year: "2020",
+    title: "Backing the idea",
+    copy: "An SBRI-supported NHS trial led to a Phase 2 grant of nearly £700,000, giving us the opportunity to grow the team and turn the early concept into a broader service.",
+    href: "https://thehealthinnovationnetwork.co.uk/wp-content/uploads/2021/06/Yorkshire-Humber-AHSN_Impact-Report_2020-21.pdf",
+    source: "AHSN impact report",
+  },
+  {
+    year: "2022–23",
+    title: "Inclusive innovation",
+    copy: "Bridgit Care won an Innovate UK Inclusive Innovation Award for work helping more carers reach statutory assessments and essential local support earlier.",
+    href: "https://iuk-business-connect.org.uk/projects/inclusive-innovation/bridgit-care/",
+    source: "Innovate UK Business Connect",
+  },
+  {
+    year: "2023–25",
+    title: "From idea to infrastructure",
+    copy: "Dorset Council reported more than 3,000 carers using Bridgit within months of launch. Further public-sector deployments followed, including a county-wide Warwickshire service in 2025.",
+    href: "https://www.dorsetcouncil.gov.uk/news/carers-flock-to-one-stop-shop-online-platform-bridgit-care",
+    source: "Dorset Council",
+  },
+];
+
+const currentWork = [
+  {
+    name: "Bridgit Care",
+    tag: "CARE · PUBLIC SERVICES · AI",
+    copy: "Helping unpaid carers find practical, local support — while giving councils, NHS teams and carer organisations a better way to reach people earlier.",
+    href: "https://bridgit.care",
+  },
+  {
+    name: "AgeWell",
+    tag: "HEALTHY AGEING · PREVENTION",
+    copy: "A digital healthy-ageing platform created for the Open University’s Take Five to Age Well campaign, with contributions from Age UK and the Open University.",
+    href: "https://wels.open.ac.uk/research/projects/take-five-age-well/take-5-case-studies/agewell-bridgitcare",
+  },
+  {
+    name: "Any Guru",
+    tag: "FOUNDERS · COACHING · AI",
+    copy: "The practical AI business support platform I wished I had while growing Bridgit — built to turn questions and challenges into clear next steps.",
+    href: "https://any.guru/",
+  },
+];
+
+const evidence = [
+  {
+    publisher: "Health Innovation Network",
+    title: "Meet the Innovator: Bridgit Care",
+    note: "The health-tech journey, the Manchester community team and the family experience behind Bridgit.",
+    href: "https://thehealthinnovationnetwork.co.uk/archive/meet-the-innovator-bridgit-care/",
+  },
+  {
+    publisher: "Innovate UK Business Connect",
+    title: "Inclusive Innovation Award",
+    note: "Recognition for shifting healthcare innovation towards unpaid family carers.",
+    href: "https://iuk-business-connect.org.uk/projects/inclusive-innovation/bridgit-care/",
+  },
+  {
+    publisher: "Social Care Institute for Excellence",
+    title: "Carers assessment showcase",
+    note: "A Department of Health and Social Care-backed webinar on the Dorset collaboration and national deployment.",
+    href: "https://www.scie.org.uk/innovation/showcase-webinars/carers-assessment-process/",
+  },
+  {
+    publisher: "Dorset Council",
+    title: "3,000 carers reached after launch",
+    note: "Independent reporting on how Bridgit was being used across Dorset’s health and care landscape.",
+    href: "https://www.dorsetcouncil.gov.uk/news/carers-flock-to-one-stop-shop-online-platform-bridgit-care",
+  },
+  {
+    publisher: "Carers Trust",
+    title: "Network Futures 2025 plenary",
+    note: "Darren joined the national closing discussion on digital trends and AI in local carer support.",
+    href: "https://carers.org/downloads/network-partner-conference-brochure-2025.pdf",
+  },
+  {
+    publisher: "The Open University",
+    title: "AgeWell case study",
+    note: "How evidence-informed healthy-ageing advice became friendly, achievable digital support.",
+    href: "https://wels.open.ac.uk/research/projects/take-five-age-well/take-5-case-studies/agewell-bridgitcare",
   },
 ];
 
@@ -68,6 +173,17 @@ const personSchema = {
     { "@type": "Organization", name: "Accenture" },
     { "@type": "Organization", name: "DXC Technology" },
   ],
+  award: "Innovate UK Inclusive Innovation Award",
+  affiliation: [
+    { "@type": "Organization", name: "Upstream Health", url: "https://www.upstream.health" },
+    { "@type": "Organization", name: "Any Guru", url: "https://any.guru" },
+  ],
+  sameAs: [
+    "https://uk.linkedin.com/in/darren-crombie",
+    "https://bridgit.care/author/darren",
+    "https://www.upstream.health/meet-the-team",
+    "https://any.guru/",
+  ],
   worksFor: {
     "@type": "Organization",
     name: "Bridgit Care",
@@ -95,8 +211,9 @@ export default function Home() {
           <a href="#story">Story</a>
           <a href="#journey">Journey</a>
           <a href="#founder">Founder</a>
+          <a href="#work">Work</a>
           <a href="#life">Life</a>
-          <a href="#watch">Watch</a>
+          <a href="#evidence">Proof</a>
         </nav>
         <a className="header-cta" href="#contact">
           Say hello <Arrow />
@@ -107,8 +224,9 @@ export default function Home() {
             <a href="#story">Story</a>
             <a href="#journey">Journey</a>
             <a href="#founder">Founder</a>
+            <a href="#work">Work</a>
             <a href="#life">Life</a>
-            <a href="#watch">Watch</a>
+            <a href="#evidence">Proof</a>
           </nav>
         </details>
       </header>
@@ -151,16 +269,16 @@ export default function Home() {
 
       <section className="identity-strip" aria-label="A snapshot of Darren">
         <div>
+          <strong>2018</strong>
+          <span>the founder chapter began</span>
+        </div>
+        <div>
           <strong>£1m+</strong>
-          <span>grant funding raised</span>
+          <span>innovation funding raised</span>
         </div>
         <div>
-          <strong>3 chapters</strong>
-          <span>Accenture → DXC → founder</span>
-        </div>
-        <div>
-          <strong>1 belief</strong>
-          <span>technology should feel human</span>
+          <strong>3,000+</strong>
+          <span>Dorset carers reached within months</span>
         </div>
       </section>
 
@@ -186,6 +304,18 @@ export default function Home() {
             Today, most of my energy sits at the meeting point of AI, care and
             public services. It is complicated, important work — which is
             exactly why I enjoy it.
+          </p>
+          <p className="source-note">
+            The documented version of this journey begins with 15 years in
+            health technology and a community nurse team in Manchester. The
+            personal version begins with my family. Both led to the same place.
+            <a
+              href="https://thehealthinnovationnetwork.co.uk/archive/meet-the-innovator-bridgit-care/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Read the independent profile <Arrow />
+            </a>
           </p>
         </div>
       </section>
@@ -226,19 +356,89 @@ export default function Home() {
           <p>
             That question became Bridgit Care: technology designed around
             unpaid carers, local knowledge and the public services trying to
-            help. Building it has meant finding funding, building trust,
-            learning from setbacks and turning emerging AI into something
-            people can actually use.
+            help. The first spark was personal. My Grandad Doug had fallen at
+            home and, without his alarm button, had to crawl to the door and
+            shout for help. My mum Jacqueline was his primary carer. Their
+            experience made the gap impossible to ignore.
           </p>
           <p>
-            Across the ventures and innovation programmes I have led, I have
-            raised more than £1 million in grant funding. I’m proud of the
-            number, but prouder of what it represents: other people backing
-            ideas with the potential to improve lives.
+            The early Upstream idea was broad preventative care. In 2019 we
+            made a deliberate pivot: stop adding to the catalogue of tools for
+            clinicians and focus on the millions of family carers holding care
+            together every day. That decision became Bridgit.
           </p>
-          <a className="button-coral" href="https://bridgit.care" target="_blank" rel="noreferrer">
-            Explore Bridgit Care <Arrow />
-          </a>
+          <p>
+            Across the ventures and programmes I have led, I have raised more
+            than £1 million in innovation funding — including a documented
+            SBRI Phase 2 award of nearly £700,000. I’m proud of the number, but
+            prouder of what it represents: other people backing ideas with the
+            potential to improve lives.
+          </p>
+          <div className="founder-actions">
+            <a className="button-coral" href="https://bridgit.care" target="_blank" rel="noreferrer">
+              Explore Bridgit Care <Arrow />
+            </a>
+            <a
+              className="founder-source"
+              href="https://thehealthinnovationnetwork.co.uk/wp-content/uploads/2021/06/Yorkshire-Humber-AHSN_Impact-Report_2020-21.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Read the founder story <Arrow />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="milestones" aria-labelledby="milestones-title">
+        <div className="milestones-heading">
+          <p className="section-label">THE DOCUMENTED JOURNEY</p>
+          <h2 id="milestones-title">A few turning points that changed the direction.</h2>
+          <p>
+            These milestones are drawn from independent health innovation,
+            government and sector sources — the public record behind the
+            personal story.
+          </p>
+        </div>
+        <div className="milestone-list">
+          {milestones.map((milestone) => (
+            <article className="milestone" key={milestone.year}>
+              <p className="milestone-year">{milestone.year}</p>
+              <h3>{milestone.title}</h3>
+              <p>{milestone.copy}</p>
+              <a href={milestone.href} target="_blank" rel="noreferrer">
+                {milestone.source} <Arrow />
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="work-now" id="work">
+        <div className="section-intro">
+          <p className="section-label">04 / WHAT I’M BUILDING NOW</p>
+          <h2>The mission is widening. The principle is not.</h2>
+          <p>
+            Start with a real problem. Listen properly. Use technology to make
+            good support easier to reach.
+          </p>
+        </div>
+        <div className="work-grid">
+          {currentWork.map((item, index) => (
+            <a
+              className="work-card"
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+              key={item.name}
+            >
+              <span className="work-index">0{index + 1}</span>
+              <p className="work-tag">{item.tag}</p>
+              <h3>{item.name}</h3>
+              <p>{item.copy}</p>
+              <span className="work-link">Visit the project <Arrow /></span>
+            </a>
+          ))}
         </div>
       </section>
 
@@ -263,7 +463,7 @@ export default function Home() {
 
       <section className="life" id="life">
         <div className="section-intro">
-          <p className="section-label">04 / AWAY FROM WORK</p>
+          <p className="section-label">05 / AWAY FROM WORK</p>
           <h2>The people — and places — that keep me grounded.</h2>
           <p>
             I’m husband to my amazing wife, Jules, and dad to Frankie and
@@ -314,9 +514,37 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="evidence" id="evidence">
+        <div className="section-intro section-intro-light">
+          <p className="section-label">06 / IN THE PUBLIC RECORD</p>
+          <h2>The work, seen from the outside.</h2>
+          <p>
+            A selection of independent profiles, case studies, awards and
+            speaking appearances. Useful if you want the evidence rather than
+            the edited biography.
+          </p>
+        </div>
+        <div className="evidence-grid">
+          {evidence.map((item) => (
+            <a
+              className="evidence-card"
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+              key={item.title}
+            >
+              <p>{item.publisher}</p>
+              <h3>{item.title}</h3>
+              <span>{item.note}</span>
+              <strong>Open source <Arrow /></strong>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <section className="watch" id="watch">
         <div className="section-intro section-intro-light">
-          <p className="section-label">05 / WATCH & LISTEN</p>
+          <p className="section-label">07 / WATCH & LISTEN</p>
           <h2>Some ideas are better spoken.</h2>
           <p>
             Longer-form conversations about care, AI and turning possibility
@@ -345,7 +573,7 @@ export default function Home() {
       </section>
 
       <section className="contact" id="contact">
-        <p className="section-label">06 / SAY HELLO</p>
+        <p className="section-label">08 / SAY HELLO</p>
         <h2>Good things usually start with a conversation.</h2>
         <p>
           If you’re working on a human problem, exploring responsible AI or

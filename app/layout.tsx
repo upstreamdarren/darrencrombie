@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     template: "%s | Darren Crombie",
   },
   description:
-    "The personal story of Darren Crombie — technologist, innovation leader and founder of Bridgit Care, working to keep AI useful, responsible and human.",
+    "Darren Crombie’s documented journey from Accenture and DXC to founding Upstream Health and Bridgit Care — building responsible AI for carers, healthy ageing and public services.",
   applicationName: "Darren Crombie",
   creator: "Darren Crombie",
   keywords: [
@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     "social care technology",
     "public service innovation",
     "Bridgit Care",
+    "Upstream Health",
+    "Any Guru",
+    "AgeWell",
+    "unpaid carers",
+    "Innovate UK",
   ],
   openGraph: {
     type: "website",
@@ -25,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Darren Crombie",
     title: "Darren Crombie | Tech is the thread. People are the point.",
     description:
-      "From Accenture and DXC to founder: Darren's journey through technology, innovation, care and the human side of building.",
+      "From Accenture and DXC to Bridgit Care: a documented journey through technology, family care, public-service innovation and responsible AI.",
     images: [
       {
         url: "/og-v2.png",
@@ -39,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Darren Crombie | Tech is the thread. People are the point.",
     description:
-      "From Accenture and DXC to founder: a personal journey through technology, innovation and care.",
+      "From Accenture and DXC to Bridgit Care: a documented journey through technology, innovation and care.",
     images: ["/og-v2.png"],
   },
   robots: { index: true, follow: true },

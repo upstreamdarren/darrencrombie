@@ -331,6 +331,27 @@ summary {
   line-height: 1.55;
 }
 
+.story-body .source-note {
+  margin-top: 2.2rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+
+.source-note a {
+  display: block;
+  width: fit-content;
+  margin-top: 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid currentColor;
+  color: var(--ink);
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
 .journey {
   padding: 14vh max(5vw, calc((100vw - var(--max)) / 2 + 4vw));
   background: var(--ink);
@@ -478,6 +499,174 @@ summary {
   margin-top: 1.25rem;
   background: var(--coral);
   color: var(--ink);
+}
+
+.founder-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+  margin-top: 1.4rem;
+}
+
+.founder-actions .button-coral {
+  margin-top: 0;
+}
+
+.founder-source {
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid currentColor;
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+}
+
+.milestones {
+  display: grid;
+  grid-template-columns: minmax(270px, 0.56fr) minmax(0, 1.44fr);
+  gap: 8vw;
+  padding: 14vh max(5vw, calc((100vw - var(--max)) / 2 + 4vw));
+  background: var(--aqua);
+}
+
+.milestones-heading {
+  position: sticky;
+  top: 4rem;
+  align-self: start;
+}
+
+.milestones-heading h2 {
+  margin: 1.5rem 0 1.8rem;
+  font-size: clamp(2.8rem, 4.6vw, 4.9rem);
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+}
+
+.milestones-heading > p:last-child {
+  max-width: 510px;
+  color: var(--ink-soft);
+  font-family: Georgia, serif;
+  line-height: 1.7;
+}
+
+.milestone-list {
+  border-top: 1px solid rgba(19, 45, 40, 0.3);
+}
+
+.milestone {
+  display: grid;
+  grid-template-columns: 90px minmax(170px, 0.55fr) minmax(0, 1fr);
+  gap: 2rem;
+  padding: 2.7rem 0;
+  border-bottom: 1px solid rgba(19, 45, 40, 0.3);
+}
+
+.milestone-year,
+.milestone h3,
+.milestone > p,
+.milestone a {
+  margin: 0;
+}
+
+.milestone-year {
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.milestone h3 {
+  font-size: clamp(1.45rem, 2.3vw, 2.25rem);
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+}
+
+.milestone > p {
+  color: var(--ink-soft);
+  font-family: Georgia, serif;
+  line-height: 1.65;
+}
+
+.milestone a {
+  grid-column: 3;
+  width: fit-content;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid currentColor;
+  font-size: 0.66rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.work-now {
+  padding: 14vh max(5vw, calc((100vw - var(--max)) / 2 + 4vw));
+  background: var(--paper);
+}
+
+.work-now .section-intro > p:last-child {
+  color: var(--ink-soft);
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: var(--max);
+  margin: 0 auto;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.work-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 470px;
+  padding: 2.4rem;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.work-card:hover {
+  z-index: 1;
+  background: var(--lime);
+  transform: translateY(-6px);
+}
+
+.work-index {
+  align-self: flex-end;
+  color: var(--coral);
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.work-tag {
+  margin: auto 0 1.2rem;
+  font-size: 0.63rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+}
+
+.work-card h3 {
+  margin: 0;
+  font-size: clamp(2.2rem, 3.6vw, 4rem);
+  letter-spacing: -0.07em;
+  line-height: 0.95;
+}
+
+.work-card > p:not(.work-tag) {
+  min-height: 110px;
+  margin: 1.6rem 0 0;
+  color: var(--ink-soft);
+  font-family: Georgia, serif;
+  line-height: 1.65;
+}
+
+.work-link {
+  margin-top: 2rem;
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.05em;
 }
 
 .mind-section {
@@ -639,6 +828,82 @@ summary {
   text-transform: uppercase;
 }
 
+.evidence {
+  padding: 14vh max(5vw, calc((100vw - var(--max)) / 2 + 4vw));
+  background: var(--ink);
+  color: var(--white);
+}
+
+.evidence .section-intro > p:last-child {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: var(--max);
+  margin: 0 auto;
+  border-top: 1px solid var(--line-light);
+  border-left: 1px solid var(--line-light);
+}
+
+.evidence-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+  padding: 2.2rem;
+  border-right: 1px solid var(--line-light);
+  border-bottom: 1px solid var(--line-light);
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.evidence-card:hover {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.evidence-card > p {
+  margin: 0 0 auto;
+  color: var(--aqua);
+  font-size: 0.64rem;
+  font-weight: 850;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.evidence-card:hover > p {
+  color: #157a68;
+}
+
+.evidence-card h3 {
+  margin: 2.5rem 0 1.1rem;
+  font-size: clamp(1.55rem, 2.4vw, 2.45rem);
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+}
+
+.evidence-card > span {
+  color: rgba(255, 255, 255, 0.65);
+  font-family: Georgia, serif;
+  line-height: 1.6;
+}
+
+.evidence-card:hover > span {
+  color: var(--ink-soft);
+}
+
+.evidence-card strong {
+  margin-top: 2rem;
+  color: var(--lime);
+  font-size: 0.67rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.evidence-card:hover strong {
+  color: var(--ink);
+}
+
 .watch {
   padding: 14vh max(5vw, calc((100vw - var(--max)) / 2 + 4vw));
   background: var(--ink);
@@ -770,6 +1035,15 @@ footer p {
   .founder-copy {
     padding: 8vh 6vw;
   }
+
+  .milestone {
+    grid-template-columns: 72px minmax(145px, 0.5fr) minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .work-card {
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 920px) {
@@ -839,7 +1113,8 @@ footer p {
 
   .story,
   .founder,
-  .mind-section {
+  .mind-section,
+  .milestones {
     grid-template-columns: 1fr;
   }
 
@@ -863,6 +1138,27 @@ footer p {
 
   .mind-mark {
     width: 290px;
+  }
+
+  .milestones-heading {
+    position: static;
+    max-width: 750px;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-card {
+    min-height: 390px;
+  }
+
+  .work-card > p:not(.work-tag) {
+    min-height: auto;
+  }
+
+  .evidence-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .life-grid {
@@ -934,7 +1230,10 @@ footer p {
 
   .story,
   .journey,
+  .milestones,
+  .work-now,
   .life,
+  .evidence,
   .watch {
     padding: 11vh 6vw;
   }
@@ -970,6 +1269,31 @@ footer p {
 
   .mind-section {
     padding: 10vh 6vw;
+  }
+
+  .milestone {
+    grid-template-columns: 65px 1fr;
+  }
+
+  .milestone h3 {
+    grid-column: 2;
+  }
+
+  .milestone > p,
+  .milestone a {
+    grid-column: 1 / -1;
+  }
+
+  .work-card {
+    min-height: 360px;
+  }
+
+  .evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .evidence-card {
+    min-height: 320px;
   }
 
   .life-grid {

@@ -9,6 +9,14 @@ test("exports Darren Crombie's homepage for Cloudflare Pages", async () => {
   assert.match(html, /Accenture/);
   assert.match(html, /DXC Technology/);
   assert.match(html, /£1m\+/);
+  assert.match(html, /Grandad Doug/);
+  assert.match(html, /SBRI Phase 2/);
+  assert.match(html, /Inclusive Innovation Award/);
+  assert.match(html, /AgeWell/);
+  assert.match(html, /Any Guru/);
+  assert.match(html, /Health Innovation Network/);
+  assert.match(html, /Dorset Council/);
+  assert.match(html, /Carers Trust/);
   assert.match(html, /I have aphantasia\./);
   assert.match(html, /Keeping Care Human in a Digital World/);
   assert.match(html, /"@type":"Person"/);
