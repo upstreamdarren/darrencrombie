@@ -593,6 +593,21 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="business-unit-signoff" aria-label="Any Guru business unit">
+        <div>
+          <p className="section-label">ANOTHER BUSINESS UNIT</p>
+          <h2>Any Guru</h2>
+        </div>
+        <p>
+          Practical AI coaching for founders and growing businesses — created
+          from the lessons, questions and hard-won experience of building
+          Bridgit Care.
+        </p>
+        <a href="https://any.guru/" target="_blank" rel="noreferrer">
+          Visit any.guru <Arrow />
+        </a>
+      </section>
+
       <footer>
         <a className="wordmark footer-wordmark" href="#top" aria-label="Back to top">
           DC<span>.</span>
