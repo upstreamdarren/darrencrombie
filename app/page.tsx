@@ -2,31 +2,49 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   description:
-    "Darren Crombie is a founder and speaker working to make artificial intelligence useful, responsible and human in health, care and public services.",
+    "The personal story of Darren Crombie — technologist, innovation leader and founder of Bridgit Care, working to keep AI useful, responsible and human.",
   alternates: { canonical: "/" },
 };
 
-const ideas = [
+const journey = [
   {
-    number: "01",
-    title: "Technology should make public services feel more human",
-    description:
-      "The best AI creates more time for judgement, empathy and the conversations that matter.",
-    tag: "AI & humanity",
+    chapter: "01",
+    organisation: "Accenture",
+    title: "Learning how change happens at scale.",
+    copy: "I began my career in the technology world at Accenture. It taught me the craft behind complex delivery: how to listen, simplify, bring different people together and turn a bold idea into something that works in the real world.",
   },
   {
-    number: "02",
-    title: "Start with the person, not the platform",
-    description:
-      "Transformation works when it begins with a real need and measures a real-world outcome.",
-    tag: "Public services",
+    chapter: "02",
+    organisation: "DXC Technology",
+    title: "Leading innovation beyond the slide deck.",
+    copy: "At DXC I moved deeper into innovation — leading projects, exploring emerging technology and helping teams move from possibility to practical change. The lesson that stayed with me: innovation only matters when somebody feels the benefit.",
   },
   {
-    number: "03",
-    title: "Responsible AI is something you practise",
-    description:
-      "Trust is built through transparency, careful deployment and continuous learning—not a policy document alone.",
-    tag: "Responsible innovation",
+    chapter: "03",
+    organisation: "Founder",
+    title: "Building around problems worth solving.",
+    copy: "That journey led me to become a founder. Since then I have built ventures around care, communities and public services, raised more than £1 million in grant funding, and kept asking the same question: how can technology help people sooner?",
+  },
+];
+
+const videos = [
+  {
+    id: "1173356042",
+    title: "Keeping Care Human in a Digital World",
+    length: "34 min",
+    note: "A deeper conversation about protecting the human heart of care while technology changes around it.",
+  },
+  {
+    id: "1057449430",
+    title: "AI Overview",
+    length: "17 min",
+    note: "An overview of the AI work and ideas shaping the next chapter of my journey.",
+  },
+  {
+    id: "1054526546",
+    title: "Any Guru Coach",
+    length: "20 min",
+    note: "A closer look at the Any Guru coaching idea and the thinking behind the product.",
   },
 ];
 
@@ -35,15 +53,20 @@ const personSchema = {
   "@type": "Person",
   name: "Darren Crombie",
   url: "https://darrencrombie.com",
-  jobTitle: "Founder and speaker",
+  image: "https://darrencrombie.com/images/darren-portrait.jpg",
+  jobTitle: "Founder and innovation leader",
   description:
-    "Founder and speaker working on responsible AI for health, care and public services.",
+    "Technologist, innovation leader and founder working on responsible AI for health, care and public services.",
   knowsAbout: [
     "Artificial intelligence",
     "Health and social care",
     "Public service innovation",
     "Unpaid carers",
     "Responsible AI",
+  ],
+  alumniOf: [
+    { "@type": "Organization", name: "Accenture" },
+    { "@type": "Organization", name: "DXC Technology" },
   ],
   worksFor: {
     "@type": "Organization",
@@ -52,7 +75,7 @@ const personSchema = {
   },
 };
 
-function ArrowIcon() {
+function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
 
@@ -66,179 +89,280 @@ export default function Home() {
 
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Darren Crombie, home">
-          DC<span className="wordmark-dot">.</span>
+          DC<span>.</span>
         </a>
         <nav className="desktop-nav" aria-label="Main navigation">
-          <a href="#about">About</a>
-          <a href="#work">Work</a>
-          <a href="#ideas">Ideas</a>
-          <a href="#speaking">Speaking</a>
+          <a href="#story">Story</a>
+          <a href="#journey">Journey</a>
+          <a href="#founder">Founder</a>
+          <a href="#life">Life</a>
+          <a href="#watch">Watch</a>
         </nav>
         <a className="header-cta" href="#contact">
-          Start a conversation <ArrowIcon />
+          Say hello <Arrow />
         </a>
         <details className="mobile-menu">
           <summary aria-label="Open navigation">Menu</summary>
           <nav aria-label="Mobile navigation">
-            <a href="#about">About</a>
-            <a href="#work">Work</a>
-            <a href="#ideas">Ideas</a>
-            <a href="#speaking">Speaking</a>
-            <a href="#contact">Contact</a>
+            <a href="#story">Story</a>
+            <a href="#journey">Journey</a>
+            <a href="#founder">Founder</a>
+            <a href="#life">Life</a>
+            <a href="#watch">Watch</a>
           </nav>
         </details>
       </header>
 
       <section className="hero" id="top">
-        <div className="hero-orbit" aria-hidden="true">
-          <span className="orbit orbit-one" />
-          <span className="orbit orbit-two" />
-          <span className="orbit orbit-three" />
-          <span className="orbit-core">Human</span>
-        </div>
-        <p className="eyebrow">AI · PUBLIC SERVICES · SOCIAL IMPACT</p>
-        <h1>
-          Building technology
-          <br />
-          that helps people <em>thrive.</em>
-        </h1>
-        <div className="hero-bottom">
+        <div className="hero-copy">
+          <p className="eyebrow">TECHNOLOGIST · FOUNDER · HUMAN OPTIMIST</p>
+          <h1>
+            Tech is the thread.
+            <br />
+            <em>People are the point.</em>
+          </h1>
           <p className="hero-intro">
-            I’m Darren Crombie. I work at the meeting point of AI, care and
-            public services—turning ambitious ideas into practical support for
-            people and communities.
+            I’m Darren Crombie — a lifelong technologist, innovation leader and
+            founder trying to make ambitious technology useful in the moments
+            that matter.
           </p>
-          <a className="circle-link" href="#about" aria-label="Discover Darren's work">
-            <span>Discover</span>
-            <span aria-hidden="true">↓</span>
-          </a>
-        </div>
-      </section>
-
-      <section className="manifesto" id="about">
-        <p className="section-label">01 / WHY</p>
-        <div className="manifesto-copy">
-          <h2>Technology should make us feel more human, not less.</h2>
-          <p>
-            The real promise of artificial intelligence is not automation for
-            its own sake. It is earlier help, better decisions and more time for
-            people to care. That belief sits behind everything I build, share
-            and advocate for.
-          </p>
-          <a className="text-link" href="#work">
-            See what that looks like in practice <ArrowIcon />
-          </a>
-        </div>
-      </section>
-
-      <section className="principles" aria-label="Darren's working principles">
-        <article>
-          <span>01</span>
-          <h3>Useful before impressive</h3>
-          <p>Technology earns its place by solving a problem people actually have.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>Human by design</h3>
-          <p>Good systems give professionals and communities more agency—not less.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Evidence over hype</h3>
-          <p>Build carefully, measure honestly and learn in the open.</p>
-        </article>
-      </section>
-
-      <section className="work" id="work">
-        <div className="section-heading">
-          <p className="section-label">02 / WORK</p>
-          <h2>Ideas are only useful when they improve real lives.</h2>
-        </div>
-        <a className="feature-card" href="https://bridgit.care" target="_blank" rel="noreferrer">
-          <div className="feature-copy">
-            <p className="card-kicker">Founder · Bridgit Care</p>
-            <h3>Helping people find support before they reach crisis.</h3>
-            <p>
-              Bridgit brings technology, local knowledge and human support
-              together around unpaid carers and the services that stand beside them.
-            </p>
-            <span className="card-link">Visit Bridgit Care <ArrowIcon /></span>
+          <div className="hero-actions">
+            <a className="button-dark" href="#story">
+              Read my story <span aria-hidden="true">↓</span>
+            </a>
+            <a className="text-link" href="#watch">
+              Watch the story <Arrow />
+            </a>
           </div>
-          <div className="feature-visual" aria-hidden="true">
-            <span className="signal signal-a" />
-            <span className="signal signal-b" />
-            <span className="signal signal-c" />
-            <span className="signal-label">Care, connected.</span>
-          </div>
-        </a>
-      </section>
-
-      <section className="ideas" id="ideas">
-        <div className="ideas-intro">
-          <p className="section-label">03 / IDEAS</p>
-          <h2>Thinking in public.</h2>
+        </div>
+        <div className="hero-portrait">
+          <span className="portrait-backdrop" aria-hidden="true" />
+          <img
+            src="/images/darren-portrait.jpg"
+            alt="Darren Crombie smiling"
+          />
           <p>
-            Notes on responsible AI, stronger public services and what it takes
-            to turn innovation into lasting change.
+            Founder of Bridgit Care
+            <br />
+            Innovation leader · Speaker · Builder
           </p>
         </div>
-        <div className="idea-list">
-          {ideas.map((idea) => (
-            <article className="idea-row" key={idea.number}>
-              <span className="idea-number">{idea.number}</span>
-              <div>
-                <p className="idea-tag">{idea.tag}</p>
-                <h3>{idea.title}</h3>
-                <p>{idea.description}</p>
-              </div>
-              <span className="idea-arrow" aria-hidden="true">→</span>
+      </section>
+
+      <section className="identity-strip" aria-label="A snapshot of Darren">
+        <div>
+          <strong>£1m+</strong>
+          <span>grant funding raised</span>
+        </div>
+        <div>
+          <strong>3 chapters</strong>
+          <span>Accenture → DXC → founder</span>
+        </div>
+        <div>
+          <strong>1 belief</strong>
+          <span>technology should feel human</span>
+        </div>
+      </section>
+
+      <section className="story" id="story">
+        <div className="story-heading">
+          <p className="section-label">01 / MY STORY</p>
+          <h2>I have always been fascinated by what technology makes possible.</h2>
+        </div>
+        <div className="story-body">
+          <p className="lead">
+            Not technology for its own sake. The useful kind — the kind that
+            removes friction, opens a door or gives somebody a better day.
+          </p>
+          <p>
+            My career has taken me from global technology organisations to
+            starting companies of my own. Along the way I have led innovation
+            projects, worked with brilliant people across sectors and learnt
+            that real progress rarely starts with the answer. It starts with a
+            better question and the courage to keep going when the route is not
+            obvious.
+          </p>
+          <p>
+            Today, most of my energy sits at the meeting point of AI, care and
+            public services. It is complicated, important work — which is
+            exactly why I enjoy it.
+          </p>
+        </div>
+      </section>
+
+      <section className="journey" id="journey">
+        <div className="section-intro section-intro-light">
+          <p className="section-label">02 / THE JOURNEY</p>
+          <h2>From big technology to deeply human problems.</h2>
+        </div>
+        <div className="journey-list">
+          {journey.map((item) => (
+            <article className="journey-row" key={item.chapter}>
+              <span className="chapter-number">{item.chapter}</span>
+              <p className="organisation">{item.organisation}</p>
+              <h3>{item.title}</h3>
+              <p className="journey-copy">{item.copy}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="speaking" id="speaking">
-        <div className="speaker-mark" aria-hidden="true">
-          <span className="quote-mark">“</span>
-          <span className="sound-line sound-one" />
-          <span className="sound-line sound-two" />
-          <span className="sound-line sound-three" />
+      <section className="founder" id="founder">
+        <div className="founder-photo photo-frame">
+          <img
+            className="mirror"
+            src="/images/carers-team.jpg"
+            alt="Darren with colleagues outside a carers centre"
+          />
+          <span>Real places. Real people. Real change.</span>
         </div>
-        <div className="speaking-copy">
-          <p className="section-label">04 / SPEAKING</p>
-          <h2>Making complex change feel possible.</h2>
+        <div className="founder-copy">
+          <p className="section-label">03 / THE FOUNDER’S STORY</p>
+          <h2>Bridgit began with a very practical question.</h2>
+          <blockquote>
+            What if people could find the right support before life reached
+            crisis point?
+          </blockquote>
           <p>
-            Keynotes and conversations for leaders exploring AI, care,
-            innovation and the future of public services.
+            That question became Bridgit Care: technology designed around
+            unpaid carers, local knowledge and the public services trying to
+            help. Building it has meant finding funding, building trust,
+            learning from setbacks and turning emerging AI into something
+            people can actually use.
           </p>
-          <div className="topic-list" aria-label="Speaking topics">
-            <span>Responsible AI in practice</span>
-            <span>The future of care</span>
-            <span>Innovation inside public services</span>
-          </div>
-          <a className="button-light" href="#contact">
-            Discuss a speaking opportunity <ArrowIcon />
+          <p>
+            Across the ventures and innovation programmes I have led, I have
+            raised more than £1 million in grant funding. I’m proud of the
+            number, but prouder of what it represents: other people backing
+            ideas with the potential to improve lives.
+          </p>
+          <a className="button-coral" href="https://bridgit.care" target="_blank" rel="noreferrer">
+            Explore Bridgit Care <Arrow />
           </a>
         </div>
       </section>
 
+      <section className="mind-section">
+        <div className="mind-mark" aria-hidden="true">
+          <span>?</span>
+        </div>
+        <div>
+          <p className="section-label">A DIFFERENT MIND’S EYE</p>
+          <h2>I have aphantasia.</h2>
+          <p className="mind-lead">
+            I don’t form pictures in my mind. I think in ideas, connections,
+            words and forward motion instead.
+          </p>
+          <p>
+            In many ways it helps keep me focused on what is in front of me. It
+            also means faces do not always stick — so if I walk past without
+            recognising you, please don’t take it personally. Say hello.
+          </p>
+        </div>
+      </section>
+
+      <section className="life" id="life">
+        <div className="section-intro">
+          <p className="section-label">04 / AWAY FROM WORK</p>
+          <h2>The people — and places — that keep me grounded.</h2>
+          <p>
+            I’m husband to my amazing wife, Jules, and dad to Frankie and
+            William. They are the home team, the honest feedback panel and some
+            of my favourite adventure partners.
+          </p>
+        </div>
+        <div className="life-grid">
+          <figure className="life-photo life-photo-tall">
+            <img src="/images/darren-summit.jpg" alt="Darren on a mountain summit" />
+            <figcaption>Wild camping and high places</figcaption>
+          </figure>
+          <figure className="life-photo life-photo-wide">
+            <img
+              className="mirror"
+              src="/images/family-hike.jpg"
+              alt="Darren with Frankie and William ready for a family hike"
+            />
+            <figcaption>Frankie, William and a lot of kit</figcaption>
+          </figure>
+          <figure className="life-photo">
+            <img
+              className="mirror"
+              src="/images/jules-and-darren.jpg"
+              alt="Darren and Jules enjoying live music together"
+            />
+            <figcaption>Jules — my amazing wife</figcaption>
+          </figure>
+          <figure className="life-photo life-photo-dog">
+            <img src="/images/dog-hills.jpg" alt="Darren's dog enjoying a hill walk" />
+            <figcaption>The four-legged expedition team</figcaption>
+          </figure>
+        </div>
+        <div className="life-notes">
+          <p>
+            <strong>Above sea level:</strong> wild camping, hills, long walks
+            and the reset that comes from carrying everything you need.
+          </p>
+          <p>
+            <strong>Below sea level:</strong> scuba diving — a completely
+            different world, and one of the few places where being fully present
+            is non-negotiable.
+          </p>
+          <p>
+            <strong>Closer to home:</strong> family time, live music and the
+            occasional challenge that ends with a medal.
+          </p>
+        </div>
+      </section>
+
+      <section className="watch" id="watch">
+        <div className="section-intro section-intro-light">
+          <p className="section-label">05 / WATCH & LISTEN</p>
+          <h2>Some ideas are better spoken.</h2>
+          <p>
+            Longer-form conversations about care, AI and turning possibility
+            into something practical.
+          </p>
+        </div>
+        <div className="video-grid">
+          {videos.map((video) => (
+            <article className="video-card" key={video.id}>
+              <div className="video-frame">
+                <iframe
+                  src={`https://player.vimeo.com/video/${video.id}?badge=0&autopause=0&player_id=0&app_id=122963`}
+                  title={video.title}
+                  loading="lazy"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+              <p className="video-length">{video.length}</p>
+              <h3>{video.title}</h3>
+              <p>{video.note}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="contact" id="contact">
-        <p className="section-label">05 / LET’S TALK</p>
-        <h2>Working on a problem that matters?</h2>
+        <p className="section-label">06 / SAY HELLO</p>
+        <h2>Good things usually start with a conversation.</h2>
         <p>
-          I’m always interested in thoughtful conversations about AI, care and
-          better public services.
+          If you’re working on a human problem, exploring responsible AI or
+          looking for a speaker who has built through the messy middle, I’d love
+          to hear from you.
         </p>
         <a className="contact-link" href="https://bridgit.care" target="_blank" rel="noreferrer">
-          Connect through Bridgit Care <ArrowIcon />
+          Connect through Bridgit Care <Arrow />
         </a>
       </section>
 
       <footer>
         <a className="wordmark footer-wordmark" href="#top" aria-label="Back to top">
-          DC<span className="wordmark-dot">.</span>
+          DC<span>.</span>
         </a>
         <p>© {new Date().getFullYear()} Darren Crombie</p>
+        <p>Tech is the thread. People are the point.</p>
         <a href="#top">Back to top ↑</a>
       </footer>
     </main>

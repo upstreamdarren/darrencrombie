@@ -4,11 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://darrencrombie.com"),
   title: {
-    default: "Darren Crombie | AI for health, care and public services",
+    default: "Darren Crombie | Founder, technologist & human optimist",
     template: "%s | Darren Crombie",
   },
   description:
-    "Founder and speaker working to make artificial intelligence useful, responsible and human in health, care and public services.",
+    "The personal story of Darren Crombie — technologist, innovation leader and founder of Bridgit Care, working to keep AI useful, responsible and human.",
   applicationName: "Darren Crombie",
   creator: "Darren Crombie",
   keywords: [
@@ -23,24 +23,24 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://darrencrombie.com",
     siteName: "Darren Crombie",
-    title: "Darren Crombie | Technology that helps people thrive",
+    title: "Darren Crombie | Tech is the thread. People are the point.",
     description:
-      "Ideas and practical work at the meeting point of AI, care and public services.",
+      "From Accenture and DXC to founder: Darren's journey through technology, innovation, care and the human side of building.",
     images: [
       {
-        url: "/og.png",
-        width: 1200,
-        height: 630,
-        alt: "Darren Crombie — Technology that helps people thrive.",
+        url: "/og-v2.png",
+        width: 1728,
+        height: 906,
+        alt: "Darren Crombie — Tech is the thread. People are the point.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Darren Crombie | Technology that helps people thrive",
+    title: "Darren Crombie | Tech is the thread. People are the point.",
     description:
-      "Ideas and practical work at the meeting point of AI, care and public services.",
-    images: ["/og.png"],
+      "From Accenture and DXC to founder: a personal journey through technology, innovation and care.",
+    images: ["/og-v2.png"],
   },
   robots: { index: true, follow: true },
   icons: {
