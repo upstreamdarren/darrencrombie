@@ -25,10 +25,14 @@ test("exports Darren Crombie's homepage for Cloudflare Pages", async () => {
   assert.doesNotMatch(html, /3,000\+|Dorset carers reached within months/);
   assert.match(html, /https:\/\/calendly\.com\/upstreamhealth\/30min/);
   assert.match(html, /Book a 30-minute conversation/);
-  assert.match(html, /ANOTHER BUSINESS UNIT/);
-  assert.match(html, /Visit any\.guru/);
+  assert.doesNotMatch(html, /ANOTHER BUSINESS UNIT/);
+  assert.match(html, /Brum Chat/);
+  assert.match(html, /FROM CARERS TO COMMUNITY IMPACT/);
+  assert.match(html, /Crisis and Resilience Fund/);
+  assert.match(html, /gov\.uk\/government\/publications\/crisis-and-resilience-fund-guidance/);
   assert.match(html, /I have aphantasia\./);
   assert.doesNotMatch(html, /Jules|Frankie|William|AgeWell/);
+  assert.doesNotMatch(html, /A rare night out together/);
   assert.match(html, /Keeping Care Human in a Digital World/);
   assert.match(html, /"@type":"Person"/);
   assert.match(html, /https:\/\/darrencrombie\.com\/og-v2\.png/);

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 
 const calendlyUrl = "https://calendly.com/upstreamhealth/30min";
+const crisisFundGuidanceUrl =
+  "https://www.gov.uk/government/publications/crisis-and-resilience-fund-guidance-for-local-authorities-in-england-1-april-2026-to-31-march-2029/the-crisis-and-resilience-fund-guidance-for-local-authorities-in-england-1-april-2026-to-31-march-2029";
 
 export const metadata: Metadata = {
   description:
@@ -78,7 +80,7 @@ const currentWork = [
   {
     name: "Bridgit Care",
     tag: "CARE · PUBLIC SERVICES · AI",
-    copy: "More than 180,000 carers supported — while helping councils, NHS teams and local charities reach people earlier, reduce delivery costs and keep support rooted in their communities.",
+    copy: "More than 180,000 carers supported — with Bridgit Care Local now taking the same practical, place-based approach into wider neighbourhood support, including Brum Chat.",
     href: "https://bridgit.care",
   },
   {
@@ -121,10 +123,10 @@ const evidence = [
     href: "https://carers.org/downloads/carers-trust-report-accounts-2024-25.pdf",
   },
   {
-    publisher: "Carers Trust",
-    title: "Network Futures 2025 plenary",
-    note: "Darren joined the national closing discussion on digital trends and AI in local carer support.",
-    href: "https://carers.org/downloads/network-partner-conference-brochure-2025.pdf",
+    publisher: "Department for Work and Pensions",
+    title: "Brum Chat in national guidance",
+    note: "The government’s Crisis and Resilience Fund guidance features Brum Chat as a case study in mapping support and creating a clearer local front door.",
+    href: crisisFundGuidanceUrl,
   },
   {
     publisher: "My UK Life",
@@ -460,6 +462,46 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="community-expansion" aria-labelledby="community-expansion-title">
+        <div className="community-expansion-heading">
+          <p className="section-label">FROM CARERS TO COMMUNITY IMPACT</p>
+          <h2 id="community-expansion-title">
+            We started with carers. The model now reaches much further.
+          </h2>
+        </div>
+        <div className="community-expansion-copy">
+          <p className="community-expansion-lead">
+            One lesson from Bridgit has kept coming back: communities often do
+            not lack support. The real problem is that people cannot see the
+            whole picture or find the right door into it.
+          </p>
+          <p>
+            Bridgit Care Local applies the same practical idea more widely.
+            Brum Chat brings social care, housing, finances, wellbeing, work
+            and local services together in one place, helping Birmingham
+            residents find clear next steps and helping local organisations
+            connect their support.
+          </p>
+          <div className="community-proof">
+            <p className="section-label">RECOGNISED IN NATIONAL GUIDANCE</p>
+            <p>
+              In April 2026, government guidance for the Crisis and Resilience
+              Fund featured Birmingham’s commissioning of Brum Chat as a case
+              study in creating a single local front door, keeping the support
+              map live, avoiding duplication and improving referrals.
+            </p>
+            <div className="community-actions">
+              <a href="https://brum.chat" target="_blank" rel="noreferrer">
+                Explore Brum Chat <Arrow />
+              </a>
+              <a href={crisisFundGuidanceUrl} target="_blank" rel="noreferrer">
+                Read the GOV.UK case study <Arrow />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="work-now" id="work">
         <div className="section-intro">
           <p className="section-label">04 / WHAT I’M BUILDING NOW</p>
@@ -535,7 +577,7 @@ export default function Home() {
               src="/images/couple-live-music-line-art.webp"
               alt="Line illustration of Darren and his wife enjoying live music"
             />
-            <figcaption>A rare night out together</figcaption>
+            <figcaption>Live music and a great day out</figcaption>
           </figure>
           <figure className="life-photo life-photo-dog">
             <img src="/images/dog-hills.jpg" alt="Darren's dog enjoying a hill walk" />
@@ -633,21 +675,6 @@ export default function Home() {
             Connect through Bridgit Care <Arrow />
           </a>
         </div>
-      </section>
-
-      <section className="business-unit-signoff" aria-label="Any Guru business unit">
-        <div>
-          <p className="section-label">ANOTHER BUSINESS UNIT</p>
-          <h2>Any Guru</h2>
-        </div>
-        <p>
-          Practical AI coaching for founders and growing businesses — created
-          from the lessons, questions and hard-won experience of building
-          Bridgit Care.
-        </p>
-        <a href="https://any.guru/" target="_blank" rel="noreferrer">
-          Visit any.guru <Arrow />
-        </a>
       </section>
 
       <footer>
