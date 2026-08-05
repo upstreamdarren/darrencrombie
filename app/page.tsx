@@ -6,7 +6,7 @@ const crisisFundGuidanceUrl =
 
 export const metadata: Metadata = {
   description:
-    "Darren Crombie’s journey from Accenture and DXC to founding Bridgit Care — supporting 180,000+ carers and helping charities deliver more impact at lower cost.",
+    "Founder and technologist Darren Crombie builds practical AI for carers, communities and public services, including Bridgit Care, Brum Chat and My UK Life.",
   alternates: { canonical: "/" },
 };
 
@@ -157,44 +157,72 @@ const videos = [
   },
 ];
 
-const personSchema = {
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Darren Crombie",
-  url: "https://darrencrombie.com",
-  image: "https://darrencrombie.com/images/darren-portrait.jpg",
-  jobTitle: "Founder and innovation leader",
-  description:
-    "Technologist, innovation leader and founder working on responsible AI for health, care and public services.",
-  knowsAbout: [
-    "Artificial intelligence",
-    "Health and social care",
-    "Public service innovation",
-    "Unpaid carers",
-    "Responsible AI",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://darrencrombie.com/#person",
+      name: "Darren Crombie",
+      url: "https://darrencrombie.com",
+      image: "https://darrencrombie.com/images/darren-portrait.jpg",
+      jobTitle: "Founder and innovation leader",
+      description:
+        "Technologist, innovation leader and founder building responsible AI for carers, communities and public services.",
+      knowsAbout: [
+        "Artificial intelligence",
+        "Health and social care",
+        "Public service innovation",
+        "Unpaid carers",
+        "Community resilience",
+        "Local welfare support",
+        "Responsible AI",
+      ],
+      alumniOf: [
+        { "@type": "Organization", name: "Accenture" },
+        { "@type": "Organization", name: "DXC Technology" },
+      ],
+      award: "Innovate UK Inclusive Innovation Award",
+      affiliation: [
+        { "@type": "Organization", name: "Upstream Health", url: "https://www.upstream.health" },
+        { "@type": "Organization", name: "Bridgit Care", url: "https://bridgit.care" },
+        { "@type": "Organization", name: "Any Guru", url: "https://any.guru" },
+        { "@type": "Organization", name: "My UK Life", url: "https://ai.myuk.life" },
+      ],
+      sameAs: [
+        "https://uk.linkedin.com/in/darren-crombie",
+        "https://bridgit.care/author/darren",
+        "https://www.upstream.health/meet-the-team",
+      ],
+      subjectOf: [
+        {
+          "@type": "Article",
+          name: "Meet the Innovator: Bridgit Care",
+          url: "https://thehealthinnovationnetwork.co.uk/archive/meet-the-innovator-bridgit-care/",
+        },
+        {
+          "@type": "CreativeWork",
+          name: "Crisis and Resilience Fund guidance",
+          url: crisisFundGuidanceUrl,
+        },
+      ],
+      worksFor: {
+        "@type": "Organization",
+        name: "Bridgit Care",
+        url: "https://bridgit.care",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://darrencrombie.com/#website",
+      url: "https://darrencrombie.com",
+      name: "Darren Crombie",
+      description:
+        "The personal website of founder and technologist Darren Crombie.",
+      inLanguage: "en-GB",
+      publisher: { "@id": "https://darrencrombie.com/#person" },
+    },
   ],
-  alumniOf: [
-    { "@type": "Organization", name: "Accenture" },
-    { "@type": "Organization", name: "DXC Technology" },
-  ],
-  award: "Innovate UK Inclusive Innovation Award",
-  affiliation: [
-    { "@type": "Organization", name: "Upstream Health", url: "https://www.upstream.health" },
-    { "@type": "Organization", name: "Any Guru", url: "https://any.guru" },
-    { "@type": "Organization", name: "My UK Life", url: "https://ai.myuk.life" },
-  ],
-  sameAs: [
-    "https://uk.linkedin.com/in/darren-crombie",
-    "https://bridgit.care/author/darren",
-    "https://www.upstream.health/meet-the-team",
-    "https://any.guru/",
-    "https://ai.myuk.life/",
-  ],
-  worksFor: {
-    "@type": "Organization",
-    name: "Bridgit Care",
-    url: "https://bridgit.care",
-  },
 };
 
 function Arrow() {
@@ -206,7 +234,7 @@ export default function Home() {
     <main>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
       <header className="site-header">
@@ -217,6 +245,7 @@ export default function Home() {
           <a href="#story">Story</a>
           <a href="#journey">Journey</a>
           <a href="#founder">Founder</a>
+          <a href="#impact">Impact</a>
           <a href="#work">Work</a>
           <a href="#life">Life</a>
           <a href="#evidence">Proof</a>
@@ -230,6 +259,7 @@ export default function Home() {
             <a href="#story">Story</a>
             <a href="#journey">Journey</a>
             <a href="#founder">Founder</a>
+            <a href="#impact">Impact</a>
             <a href="#work">Work</a>
             <a href="#life">Life</a>
             <a href="#evidence">Proof</a>
@@ -428,7 +458,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="impact-principle" aria-labelledby="impact-title">
+      <section className="impact-principle" id="impact" aria-labelledby="impact-title">
         <div className="impact-kicker">
           <p className="section-label">THE DECISION THAT MATTERS NOW</p>
           <span>180,000+</span>

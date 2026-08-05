@@ -27,6 +27,7 @@ test("exports Darren Crombie's homepage for Cloudflare Pages", async () => {
   assert.match(html, /Book a 30-minute conversation/);
   assert.doesNotMatch(html, /ANOTHER BUSINESS UNIT/);
   assert.match(html, /Brum Chat/);
+  assert.match(html, /Bridgit Care Local/);
   assert.match(html, /FROM CARERS TO COMMUNITY IMPACT/);
   assert.match(html, /Crisis and Resilience Fund/);
   assert.match(html, /gov\.uk\/government\/publications\/crisis-and-resilience-fund-guidance/);
@@ -35,6 +36,10 @@ test("exports Darren Crombie's homepage for Cloudflare Pages", async () => {
   assert.doesNotMatch(html, /A rare night out together/);
   assert.match(html, /Keeping Care Human in a Digital World/);
   assert.match(html, /"@type":"Person"/);
+  assert.match(html, /"@type":"WebSite"/);
+  assert.match(html, /"@id":"https:\/\/darrencrombie\.com\/#person"/);
+  assert.match(html, /Community resilience/);
+  assert.match(html, /href="#impact"/);
   assert.match(html, /https:\/\/darrencrombie\.com\/og-v2\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
 });

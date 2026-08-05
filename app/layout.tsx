@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     template: "%s | Darren Crombie",
   },
   description:
-    "Darren Crombie’s journey from Accenture and DXC to founding Bridgit Care — supporting 180,000+ carers and helping charities deliver more impact at lower cost.",
+    "Founder and technologist Darren Crombie builds practical AI for carers, communities and public services, including Bridgit Care, Brum Chat and My UK Life.",
   applicationName: "Darren Crombie",
   creator: "Darren Crombie",
   keywords: [
@@ -17,6 +17,8 @@ export const metadata: Metadata = {
     "social care technology",
     "public service innovation",
     "Bridgit Care",
+    "Bridgit Care Local",
+    "Brum Chat",
     "Upstream Health",
     "Any Guru",
     "My UK Life",
@@ -24,6 +26,9 @@ export const metadata: Metadata = {
     "unpaid carers",
     "Innovate UK",
     "Carers Trust",
+    "community resilience",
+    "local welfare support",
+    "Crisis and Resilience Fund",
     "social impact",
   ],
   openGraph: {
@@ -33,7 +38,7 @@ export const metadata: Metadata = {
     siteName: "Darren Crombie",
     title: "Darren Crombie | Tech is the thread. People are the point.",
     description:
-      "From Accenture and DXC to Bridgit Care: supporting 180,000+ carers and helping local charities deliver more impact at lower cost.",
+      "Practical AI for carers, communities and public services — from Bridgit Care to Brum Chat and My UK Life.",
     images: [
       {
         url: "/og-v2.png",
@@ -47,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Darren Crombie | Tech is the thread. People are the point.",
     description:
-      "From Accenture and DXC to Bridgit Care: supporting 180,000+ carers with an impact-first approach to technology.",
+      "Practical AI for carers, communities and public services — built around impact, not technology for its own sake.",
     images: ["/og-v2.png"],
   },
   robots: { index: true, follow: true },
